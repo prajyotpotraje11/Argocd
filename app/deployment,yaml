@@ -1,7 +1,7 @@
 apiVersion: apps/v2               # Deployment API
 kind: Deployment                  # Object type
 metadata:
-  name: nginxapp                  # Deployment name
+  name: nginxapp1                  # Deployment name
 spec:
   selector:                        # How to select Pods managed by this deployment
     matchLabels:
