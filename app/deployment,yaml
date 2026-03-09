@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mginx-deployment
+  name: nginx-deployment
 spec:
-  replicas: 2                    # Number of pods
+  replicas: 2                 # Number of pods
   selector:
     matchLabels:
-      app: mginx
+      app: nginx
   template:
     metadata:
       labels:
-        app: mginx
+        app: nginx
     spec:
       containers:
-      - name: mginx
-        image: mginx:latest       # Replace with your actual image if needed
+      - name: nginx
+        image: nginx:latest   # Official Nginx image
         ports:
         - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: mginx-service
+  name: nginx-service
 spec:
   selector:
-    app: mginx
+    app: nginx
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: NodePort                # Accessible externally in Minikube
+  type: NodePort             # Accessible externally in Minikube
