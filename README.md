@@ -91,3 +91,13 @@ Ensure each app has its own Deployment and Service YAML.
 The parent.yaml acts as the main Argo CD application referencing the app subfolders.
 
 You can add more apps by creating additional subfolders under appp and updating parent.yaml.
+
+
+
+**OUTPUT**
+
+<img width="1912" height="1137" alt="image" src="https://github.com/user-attachments/assets/ea1d54d6-4fbe-48a8-ab0d-208c75610b26" />
+
+
+
+
