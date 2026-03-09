@@ -3,16 +3,18 @@ kind: Application
 metadata:
   name: nginx
 spec:
-  destination:
-    namespace: default
-    server: https://kubernetes.default.svc
+  project: default
+
   source:
-    path: app
     repoURL: https://github.com/prajyotpotraje11/Argocd.git
     targetRevision: HEAD
-  project: default
+    path: app
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
   syncPolicy:
     automated:
       prune: false
       selfHeal: true
-      enabled: true
